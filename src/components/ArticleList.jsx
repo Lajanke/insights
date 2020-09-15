@@ -10,7 +10,6 @@ function ArticleList() {
 
     useEffect(() => {
         AOS.init();
-        console.log('in effect')
         Axios.get('http://localhost:8000')
         .then((res) => {
             setList(res.data);

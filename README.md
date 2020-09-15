@@ -28,7 +28,7 @@ cd into the project file.
 
 Before launching the react app run the following command in the terminal.
 
-`$ php -S localhost:8000`
+`php -S localhost:8000`
 
 This will make the extracted data available at the endpoint http://localhost:8000. If a different port is required for your local environment then change the port number in the src/components/ArticleList get request also.
 
