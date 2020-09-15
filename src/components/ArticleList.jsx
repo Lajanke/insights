@@ -22,7 +22,7 @@ function ArticleList() {
         <ul>
            {articleList.map((article, index) => {
                return <li key={index}>
-                   <ArticleCard />
+                   <ArticleCard title={article.title} image={article.image} link={article.link} num={index} key={index}/>
                </li>
            })}
         </ul>
