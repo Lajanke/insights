@@ -7,7 +7,12 @@ function ArticleCard(props) {
 
     return (
         <div className='articleCard'>
-            <img src={`${image}`} alt='related' />
+            <img src={`${image}`} 
+            alt='related' 
+            data-aos="zoom-in-left"
+            data-aos-offset="150"
+            data-aos-duration="2000"
+            />
             <a href={`${link}`}>{`${title}`}<p>(external link)</p></a>
         </div>
     );
