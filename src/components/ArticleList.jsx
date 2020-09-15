@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import ArticleCard from './ArticleCard';
 
 function ArticleList() {
     const [articleList, setList] = useState([]);
@@ -19,9 +20,11 @@ function ArticleList() {
 
     return (
         <ul>
-            <p>list</p>
-            <p>list</p>
-            <p>list</p>
+           {articleList.map((article, index) => {
+               return <li key={index}>
+                   <ArticleCard />
+               </li>
+           })}
         </ul>
     );
 }
