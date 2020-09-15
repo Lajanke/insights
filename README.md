@@ -30,13 +30,15 @@ Before launching the react app run the following command in the terminal.
 
 `$ php -S localhost:8000`
 
-This will make the extrcted data available at the endpoint http://localhost:8000. If a different port is required for your local environment then change the port number in the src/components/ArticleList get request also.
+This will make the extracted data available at the endpoint http://localhost:8000. If a different port is required for your local environment then change the port number in the src/components/ArticleList get request also.
 
 ```js
 Axios.get('http://localhost:[YOUR_PORT_NUMBER]')
 ```
 
 ## Launching react app
+
+In a new terminal (leave the previous one running the PHP script open) use the following command to start the react app.
 
     `npm start`
 
