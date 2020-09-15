@@ -27,3 +27,23 @@ h1:after {
   box-shadow: 0px 0px 0px 9999px rgb(45, 46, 131);
   z-index: -1;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.articleCard a {
+  text-decoration: none;
+}
