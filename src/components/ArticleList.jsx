@@ -16,12 +16,9 @@ function ArticleList() {
             setList(res.data);
         })
         .catch((err) => {
-            console.log(err)
-            setError(true)
+            setError(true);
         })
     }, []);
-
-    console.log(articleList)
 
     if (err) {
         return <ErrorDisplayer />

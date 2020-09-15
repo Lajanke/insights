@@ -1,7 +1,6 @@
 import React from 'react';
 
 function ArticleCard(props) {
-
     const { title, link } = props;
     const image = props.image ? `${props.image}` : 'https://kidsinsights.com/wp-content/uploads/2019/09/Globe-Graphic.png';
     const direction = props.num % 2 === 1 ? 'left' : 'right';
