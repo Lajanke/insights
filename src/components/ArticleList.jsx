@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import ArticleCard from './ArticleCard';
 import AOS from 'aos';
+import ErrorDisplayer from './ErrorDisplayer';
 
 function ArticleList() {
     const [articleList, setList] = useState([]);
+    const [err, setError] = useState(false);
 
     useEffect(() => {
         AOS.init();
@@ -15,20 +17,25 @@ function ArticleList() {
         })
         .catch((err) => {
             console.log(err)
+            setError(true)
         })
     }, []);
 
     console.log(articleList)
 
-    return (
-        <ul>
-           {articleList.map((article, index) => {
-               return <li key={index}>
-                   <ArticleCard title={article.title} image={article.image} link={article.link} num={index} key={index}/>
-               </li>
-           })}
-        </ul>
-    );
+    if (err) {
+        return <ErrorDisplayer />
+    } else {
+        return (
+            <ul>
+               {articleList.map((article, index) => {
+                   return <li key={index}>
+                       <ArticleCard title={article.title} image={article.image} link={article.link} num={index} key={index}/>
+                   </li>
+               })}
+            </ul>
+        );
+    }  
 }
 
 export default ArticleList;
